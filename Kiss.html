@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Touch to Change Image</title>
+<style>
+    #game-container {
+        position: relative;
+        width: 1000px;
+        height: 1000px;
+    }
+    #image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 500px;
+        height: 500px;
+    }
+</style>
+</head>
+<body>
+
+<div id="game-container">
+    <img id="image" src="2000.png" alt="2000" onclick="changeImage()">
+</div>
+
+<script>
+function changeImage() {
+    var image = document.getElementById("image");
+    if (image.src.endsWith("2000.png")) {
+        image.src = "1999.png";
+        image.alt = "1999";
+    } else {
+        image.src = "2000.png";
+        image.alt = "2000";
+    }
+}
+</script>
+
+</body>
+</html>
